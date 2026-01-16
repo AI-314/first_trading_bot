@@ -47,7 +47,7 @@ async fn main() -> anyhow::Result<()> {
             Note that if the 0x part is not at the start of your private key\n
             You must add the 0x \n
             The private key can be found from inside meta-mask");
-        let funder_key = std::env::var("FUNDER_KEY")
+        let funder_key = std::env::var("FUNDER_ADDR")
             .expect("The funder address should be the address\n
             Of your polymarket proxy wallet found in your profile\n\n
             FUNDER_ADDR = x0...\n\n
