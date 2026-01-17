@@ -97,14 +97,14 @@ async fn main() -> anyhow::Result<()> {
                     let limit = 40.0;
 
                     if trend > limit || trend < -limit {
-                        println!("!!! trend: {}", trend);
+                        
                         let token = if trend > limit { yes_token.clone() } else { no_token.clone() };
                         let price_info = *rx_price_info.borrow();
 
                         if let (Some(bid), Some(ask)) = price_info {
                             let price = (bid + ask) / 2.0; 
                             if price > 0.05 && price < 0.95 {
-
+                                println!("!!! trend: {}", trend);
 // ------------------------------------------------------------------------------------------------------------------
 
                                 let order = client.market_order().token_id(&token)
