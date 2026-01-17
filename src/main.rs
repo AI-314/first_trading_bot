@@ -94,7 +94,7 @@ async fn main() -> anyhow::Result<()> {
                 Ok(_) => {
                     let trend = *rx_trend.borrow();
 
-                    let limit = 40.0;
+                    let limit = 50.0;
 
                     if trend > limit || trend < -limit {
                         
